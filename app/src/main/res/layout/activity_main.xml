@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sambains.androidmvvm.viewmodel.NumbersViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(editable) -> viewModel.firstNumberTextChange(editable.toString())}"
+                android:hint="@string/hint_first_number"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/default_number_input" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(editable) -> viewModel.secondNumberTextChange(editable.toString())}"
+                android:hint="@string/hint_second_number"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/default_number_input" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(editable) -> viewModel.thirdNumberTextChange(editable.toString())}"
+                android:hint="@string/hint_third_number"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/default_number_input" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(editable) -> viewModel.fourthNumberTextChange(editable.toString())}"
+                android:hint="@string/hint_fourth_number"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/default_number_input" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(editable) -> viewModel.fifthNumberTextChange(editable.toString())}"
+                android:hint="@string/hint_fifth_number"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/default_number_input" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:afterTextChanged="@{(editable) -> viewModel.sixthNumberTextChange(editable.toString())}"
+                android:hint="@string/hint_sixth_number"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/default_number_input" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/default_margin"
+            android:onClick="@{() -> viewModel.onSumClicked()}"
+            android:text="@{String.format(@string/value_sum, Integer.toString(viewModel.sum))}"
+            app:flashing="@{viewModel.isAnimating}" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Android MVVM</string>
+
+    <string name="hint_first_number">First number</string>
+    <string name="hint_second_number">Second number</string>
+    <string name="hint_third_number">Third number</string>
+    <string name="hint_fourth_number">Fourth number</string>
+    <string name="hint_fifth_number">Fifth number</string>
+    <string name="hint_sixth_number">Sixth number</string>
+
+    <string name="value_sum">Sum: %s</string>
+
+    <string name="default_number_input">0</string>
+</resources>
