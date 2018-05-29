@@ -25,7 +25,7 @@
                 android:layout_weight="1"
                 android:afterTextChanged="@{(editable) -> viewModel.firstNumberTextChange(editable.toString())}"
                 android:hint="@string/hint_first_number"
-                android:inputType="numberDecimal|numberSigned"
+                android:inputType="numberSigned"
                 android:text="@string/default_number_input" />
 
             <EditText
@@ -34,7 +34,7 @@
                 android:layout_weight="1"
                 android:afterTextChanged="@{(editable) -> viewModel.secondNumberTextChange(editable.toString())}"
                 android:hint="@string/hint_second_number"
-                android:inputType="numberDecimal|numberSigned"
+                android:inputType="numberSigned"
                 android:text="@string/default_number_input" />
 
         </LinearLayout>
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 android:afterTextChanged="@{(editable) -> viewModel.thirdNumberTextChange(editable.toString())}"
                 android:hint="@string/hint_third_number"
-                android:inputType="numberDecimal|numberSigned"
+                android:inputType="numberSigned"
                 android:text="@string/default_number_input" />
 
             <EditText
@@ -59,7 +59,7 @@
                 android:layout_weight="1"
                 android:afterTextChanged="@{(editable) -> viewModel.fourthNumberTextChange(editable.toString())}"
                 android:hint="@string/hint_fourth_number"
-                android:inputType="numberDecimal|numberSigned"
+                android:inputType="numberSigned"
                 android:text="@string/default_number_input" />
 
         </LinearLayout>
@@ -75,7 +75,7 @@
                 android:layout_weight="1"
                 android:afterTextChanged="@{(editable) -> viewModel.fifthNumberTextChange(editable.toString())}"
                 android:hint="@string/hint_fifth_number"
-                android:inputType="numberDecimal|numberSigned"
+                android:inputType="numberSigned"
                 android:text="@string/default_number_input" />
 
             <EditText
@@ -84,7 +84,7 @@
                 android:layout_weight="1"
                 android:afterTextChanged="@{(editable) -> viewModel.sixthNumberTextChange(editable.toString())}"
                 android:hint="@string/hint_sixth_number"
-                android:inputType="numberDecimal|numberSigned"
+                android:inputType="numberSigned"
                 android:text="@string/default_number_input" />
 
         </LinearLayout>
